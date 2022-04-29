@@ -1,4 +1,32 @@
 /**
-
-
+ đặt biến trong css bắt đầu từ :root{ tên biến }
+ root là lớp giả root là lobal dùng khấp mội nợi ở biến
+ local thì đặt ngay thẻ hoạc class id --... tên biến rồi thuộc tính
+ để sử dụng biên thì dùng var(tên biến) từ khóa tìm kiếm css function
+ mục đích đặt biến là khi sử dụng nhiều nơi chỉ cần sử 1 chổ
+  CSS unit:
+    1.CSS Absolute unit (là css tuyệt đối):
+      - px:là điểm ảnh.
+      - pt:
+      - cm:
+      - mm
+      - inch
+      - pc
+    2.Css Relative unit (là tương đối):
+    -Lưu ý: đơn vị tương đói cần một nơi thuộc vào
+      - %: thằng này sẻ thuộc vào thằng chứa nó (thằng cha);
+      -rem:thằng này phụ thuộc vào thẻ html vd html có fontsize: 20px thì 1 rem=20px 
+           trong thực tế thằng này sẻ sử dụng nhiều hơn và dể thẻ html fontsize:100% mặc định fontsize 100% là 16px
+      -em:thăng này nó thuộc vào thẻ chứ nó gần nhât vd thằng chứa nó gần nó có fontsize=10px thì 1em=10px
+      -vw(viewport width): thằng này phụ thuộc vào kích thước chiều ngang của trình duyệt
+      -vh(viewport height): thằng này phụ thược vào chiều dài của kích thước của trình duyệt
+      -vmin
+      -vmax
 **/
+/* vd: biến */
+:root {
+  --text-color: red;
+}
+h1 {
+  color: var(--text-color);
+}
