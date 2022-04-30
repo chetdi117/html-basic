@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vd box sizing</title>
+    <style>
+      /*
+        vd ta để kích thuocs div class box-sizing-content là w:100px và h:100px
+           kho ta padding và border padding là 1 px và border là 1px thì khích thược thật của div box-sizing-content giờ đả tăng lên là 112px và h:112
+           để muốn giữ lại khích thước cảu box-sizing-content thì ta sử dụng box-sizing nó sẻ tự đông tính theo công thức  kích thước hiện tại -(kích thước pading + kích thước border + kích thước contnent củ)
+           
+      */
+      .box {
+        float: left;
+        margin: 15px;
+      }
+      .box-sizing-content {
+        width: 100px;
+        height: 100px;
+        background: red;
+        border: 1px solid black;
+        padding: 5px; /*lưu ý: khi sử dụng box-sizing đừng để padding quá lớn nó sẻ ko tính ra được kích thước thật*/
+        color: white;
+        box-sizing: border-box;
+      }
+      .box-sizing-content-none {
+        width: 100px;
+        height: 100px;
+        background: blue;
+        border: 1px solid black;
+        padding: 5px; /*lưu ý: khi sử dụng box-sizing đừng để padding quá lớn nó sẻ ko tính ra được kích thước thật*/
+        color: white;
+        box-sizing: content-box; /*đây là thuộc tính mặc đinh của box-sizing set cái này thì trở lại như củ nhưu ko set box-sizing; */
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box box-sizing-content">
+      <div class="box-text">vd: box-sizing content</div>
+    </div>
+    <div class="box box-sizing-content-none">
+      <div class="box-text">vd: box-sizing content</div>
+    </div>
+  </body>
+</html>

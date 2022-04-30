@@ -22,11 +22,16 @@
       -vh(viewport height): thằng này phụ thược vào chiều dài của kích thước của trình duyệt
       -vmin
       -vmax
+    3.box-sizing: chiều ngàng của đối tượng = kích thuoc của border + kích thuocs pading+ kích thước content
+      -content-box: đây là thuộc tính mặt đinh của box-sizing là ko set thuộc tính box-sizing trở kích thuoc chưa set box-sizing
+      -border-box: đây là thuộc tính kích hoạt box-sizing
+      - unset: là hủy thuộc tính, trong thức tế khi muốn hủy box-sizing thì gọi là hàm này để unset để hủy thuộc tính trước đó của class hoạc id của đó
 **/
 /* vd: biến */
 :root {
   --text-color: red;
 }
+
 h1 {
   color: var(--text-color);
 }
