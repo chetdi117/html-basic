@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>back group img</title>
+    <style>
+      html body {
+        margin: 0;
+      }
+      .header {
+        width: 100%;
+        height: 172px; /*full chiều dọc của trình duyệt*/
+        /* background image có thể tròng nhiều hình ảnh với nhau thông qua url, url */
+
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/A_Black_Star.png/689px-A_Black_Star.png?20150227173320),
+          url(https://kenh14cdn.com/203336854389633024/2021/8/1/voxngoctraan-19579328036514673850787108742896069504212941n-16277794323641987492369.jpg);
+        background-size: 153px;
+        background-repeat: no-repeat;
+      }
+
+      .linear-gradient {
+        /*backgroud image có css function là linear-gradient(): tạo ra mọt dảy mảu chuyển điều đặng truyền vào tham số liner-gradient(hướng xoay của hình từ 0độ tới 360 đô,tham số này là dãy màu chuyển,điểm cuối màu chuyển) */
+        /* chỉnh độ trong xuốt rgba(số mầu của red, số màu của green, va số màu của blue, độ trong xuốt) */
+        background-image: linear-gradient(
+            90deg,
+            rgba(255, 255, 0, 0.5),
+            rgba(131, 36, 160, 0.5)
+          ),
+          url(https://kenh14cdn.com/203336854389633024/2021/8/1/voxngoctraan-19579328036514673850787108742896069504212941n-16277794323641987492369.jpg);
+        margin-top: 20px;
+        height: 172px;
+        background-repeat: no-repeat;
+        background-size: 153px;
+      }
+
+      .backgrousort {
+        width: 100%;
+        height: 172px;
+        /* backgroud củng có thể ghi ngắn lại background: url hình ảnh tới  toi no-repeat */
+
+        background: linear-gradient(
+              90deg,
+              rgba(250, 87, 11, 0.5),
+              rgba(66, 89, 219, 0.5)
+            )
+            no-repeat,
+          url(https://kenh14cdn.com/203336854389633024/2021/8/1/voxngoctraan-19579328036514673850787108742896069504212941n-16277794323641987492369.jpg)
+            no-repeat;
+        background-size: 153px;
+        margin-top: 20px;
+      }
+
+      .backgroud-size-contain {
+        width: 100%;
+        height: 172px;
+        /* backgroud củng có thể ghi ngắn lại background: url hình ảnh tới  toi no-repeat */
+
+        background: url(https://kenh14cdn.com/203336854389633024/2021/8/1/voxngoctraan-19579328036514673850787108742896069504212941n-16277794323641987492369.jpg)
+          no-repeat;
+        /*
+          backgroud-size có một số thuộc tính nữa:
+            -contain: lấy cái chiêu dài nhất cả 2 chiều dài và ngan đảm bảo ko bi che khuất và ko bị cắt xén của hình ảnh
+            -cover: nó chọn cạnh dài hơn hình ảnh vd hình anh có chiều dọc dài hơn chiều dài thì nó lấy chiều dọc chấp nhạn che khuất
+        */
+        background-size: contain;
+        margin-top: 20px;
+      }
+
+      .backgroud-size-cover {
+        width: 100%;
+        height: 172px;
+        /* backgroud củng có thể ghi ngắn lại background: url hình ảnh tới  toi no-repeat */
+
+        background: url(https://kenh14cdn.com/203336854389633024/2021/8/1/voxngoctraan-19579328036514673850787108742896069504212941n-16277794323641987492369.jpg)
+          no-repeat;
+        /*
+          backgroud-size có một số thuộc tính nữa:
+            -contain: lấy cái chiêu dài nhất cả 2 chiều dài và ngan đảm bảo ko bi che khuất và ko bị cắt xén của hình ảnh
+            -cover: nó chọn cạnh dài hơn hình ảnh vd hình anh có chiều dọc dài hơn chiều dài thì nó lấy chiều dọc chấp nhạn che khuất
+        */
+        background-size: cover;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header"></div>
+    <div class="linear-gradient"></div>
+    <div class="backgrousort"></div>
+    <div class="backgroud-size-contain"></div>
+    <div class="backgroud-size-cover"></div>
+  </body>
+</html>
