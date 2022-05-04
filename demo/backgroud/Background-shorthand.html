@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Background shorthand</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+      }
+      .box {
+        /* 
+          đây là cach viết rút gọn của toàn bộ thuộc tính của background lưu ý: là khi background-size thì cần có dấu / tới backgroud size
+        */
+        width: 100%;
+        height: 100vh;
+        background: url(https://kenh14cdn.com/203336854389633024/2021/8/1/voxngoctraan-19579328036514673850787108742896069504212941n-16277794323641987492369.jpg)
+          center/contain no-repeat;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+  </body>
+</html>

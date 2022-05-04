@@ -32,6 +32,16 @@
         -border-box: Thuộc tính là trạng thái mặt đinh của backbgroup clip
         -padding-box: Thuộc tính là trạng thái đổ backgroup từ padding vào
         -content-box: Thuộc tính là trạng thái đổ backgroup từ content vào
+    5.background-origin: nó có tương tự như backgroud-clip nhưng nó thường sử dụng cho background-image
+      thuộc tính:
+        -border-box: Thuộc tính là trạng thái mặt đinh của backbgroup clip
+        -padding-box: Thuộc tính là trạng thái đổ backgroup từ padding vào
+        -content-box: Thuộc tính là trạng thái đổ backgroup từ content vào
+    6.Background position: xác đinh vị trí của backgroud image 
+        -Niếu truyền 1 thuộc tính vị trí center,top,left,right,bottom thì thuộc tính thứ 2 tự hiểu là center,
+         tương tự giá trị số như 10px,20px, 10%,20%,10rem thì thuộc tính thứ 2 là tự center.
+        Lưu ý nó còn có thể định nghĩa cả vị trí keyword vàgiá trị số như 
+        vd: ban muốn hình nó float theo top right và bạn muốn nó cách top 10px và 20 px thì bạn có thể ghi như sau: background-position:top 10px right 20px 
 **/
 
 /* vd: biến */
