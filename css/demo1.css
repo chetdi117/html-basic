@@ -42,6 +42,13 @@
          tương tự giá trị số như 10px,20px, 10%,20%,10rem thì thuộc tính thứ 2 là tự center.
         Lưu ý nó còn có thể định nghĩa cả vị trí keyword vàgiá trị số như 
         vd: ban muốn hình nó float theo top right và bạn muốn nó cách top 10px và 20 px thì bạn có thể ghi như sau: background-position:top 10px right 20px 
+    7.Css function:
+      -var(): đặt biến
+      -linear-gradient():
+      -rgba():chỉnh màu trong xuốt
+      -rgb(): cài này chỉnh màu ko có trong xuốt
+      -calc():giúp tính toán được vd (120px - 50px) nhớ có khoản trắng ở dấu - có thể có giá trị tương đối và tuyệt đối
+      -attr():nó là thuộc tính html thường lớp giả 
 **/
 
 /* vd: biến */
@@ -51,4 +58,9 @@
 
 h1 {
   color: var(--text-color);
+}
+/* vd attr() trong css */
+
+a::after {
+  content: " (" attr(href) ")";
 }
