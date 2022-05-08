@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo classes</title>
+    <style>
+      ul li.hover:hover {
+        color: white;
+        background: red;
+      }
+      ul li.active:active {
+        color: white;
+        background: red;
+      }
+      #first-child li:first-child {
+        color: white;
+        background: rgb(119, 7, 211);
+      }
+      #last-child li:last-child {
+        background: rgb(0, 238, 147);
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>:root</li>
+      <li class="hover">:hover</li>
+      <li class="active">:active</li>
+      <li>:first-child</li>
+      <li>:last-child</li>
+    </ul>
+    <ul id="first-child">
+      <li>:root</li>
+      <li>:hover</li>
+      <li>:active</li>
+      <li>:first-child</li>
+      <li>:last-child</li>
+    </ul>
+
+    <ul id="last-child">
+      <li>:root</li>
+      <li>:hover</li>
+      <li>:active</li>
+      <li>:first-child</li>
+      <li>:last-child</li>
+    </ul>
+  </body>
+</html>
