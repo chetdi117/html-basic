@@ -60,8 +60,11 @@
       - ::after: phần tử giả ở sau
       - ::first-latter: đây là phần tử giả cho ký text ký tự đầu tiên muốn thuộc tính khác vd muốn nó inhoa hay đổi màu chử chử to hơn
       - ::first-line: đây là phần tử giả cho để cấu hình css cho dòng đâu tiên muốn thay đổi dòng đầu tiên nó sao thì chỉ cần ghi first
-      - ::selection: đây là phàn tử giả thay dổi khi tô text hoạc chon một thuộc tính đó
-**/
+      - ::selection: đây là phàn tử giả thay dổi khi khi quét copy vd dổi màu background hay đổi màu chư
+    10.CSS Position:
+    -Relative: là vị trí tương đối lấy chính mình làm góc tạo độ ko phụ thuộc vào thằng bên ngoài nào cả
+    -Absolute: là vị trí tương đối phụ thuộc vào vị trí elements có position gần nó nhất làm góc tạo độ và điều coi là thằng cha nó.
+     
 
 /* vd: biến */
 :root {
