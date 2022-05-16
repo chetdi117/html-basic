@@ -64,7 +64,11 @@
     10.CSS Position:
     -Relative: là vị trí tương đối lấy chính mình làm góc tạo độ ko phụ thuộc vào thằng bên ngoài nào cả
     -Absolute: là vị trí tương đối phụ thuộc vào vị trí elements có position gần nó nhất làm góc tạo độ và điều coi là thằng cha nó.
-     
+    11.Css FlexBox:
+    -mô hinh sử dụng lây out flex box: flex box có 2 thành phần chính
+      -flex-contianer: là thẻ chứa các thẻ flex item
+      -flex-item:là con của flex-contianer
+      -main axis: là quyết định flex item nó dược nằm vd 2 có cách nằm là nằm ngang nằm dọc 
 
 /* vd: biến */
 :root {
