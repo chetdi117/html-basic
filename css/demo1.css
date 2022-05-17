@@ -68,8 +68,29 @@
     -mô hinh sử dụng lây out flex box: flex box có 2 thành phần chính
       -flex-contianer: là thẻ chứa các thẻ flex item
       -flex-item:là con của flex-contianer
-      -main axis: là quyết định flex item nó dược nằm vd 2 có cách nằm là nằm ngang nằm dọc 
-
+      -main axis: là quyết định flex item nó dược nằm vd 2 có cách nằm là nằm ngang nằm dọc
+    -Thuộc tính flex box:
+      -display:
+          -flex:có sử dụng playout display flex ko
+          -ineline-flex:
+      -flex-direction: giúp thây đổi phương hướng main axis mặc đinh nó là row
+          -row: giúp xắp theo nàm ngang;
+          -column: gúp flex item nàm dọc
+      -flex-wrap:
+          -wrap: giấp xuông dòng khi ở chế độ row
+          -nowrap:là ko xuống dòng.
+          -wrap-reverse:đảo chiều xấp xếp flex item
+      -flex-basis: thay đổi kính thước main size tùy vào thuộc tính flex box row hay collum.
+      -justify-content: canh được các main axis theo bên trái bên phải ở giữa theo row còn trên giữa xuống theo thuộc tính colum
+      -justify-seft: đây là canh cho flex item còn justifu-cotent là thằng cha nhưng khi xét thuộc tính justify-cotent cho thằng cha ko cần set thuộc tính này nữa
+                     vì tất cả thuộc tính thăng còn điều theo thằng cha.
+      -alin-content:giốn như flex-contenter
+      -alin-seft:cung gioogsn như alin-content dành cho flex-item.
+      -flex-grown:thây đổi khíc thước flex-item theo hương main size.
+      -flex-shrink:ngược lại flex-grown
+      -flex: là cách viết sort  cảu flex-basic và flex-grow và flex-shrink.
+      -order: quyết định thứ tự flex item hiển thị.
+      -flex-flow: là sort của flex-direction vả flex-wrap canh
 /* vd: biến */
 :root {
   --text-color: red;
