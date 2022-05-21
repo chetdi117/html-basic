@@ -1,0 +1,24 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav {
+  min-width: 42px;
+  background: #ef5122;
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+}
+
+.nav-list {
+  padding-left: 0;
+  margin: auto 16px;
+}
+
+.nav-item {
+  color: #fff;
+  list-style: none;
+  margin: 0 8px;
+  display: inline-block;
+}
