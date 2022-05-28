@@ -129,34 +129,68 @@ body {
   margin: auto;
 }
 
+/* Chart layout */
 .chart-layout {
-  background: #fff;
   margin: 36px auto 0 auto;
   padding: 32px 0;
-  height: 360px;
+  height: 320px;
+  background-color: #fff;
   display: flex;
   justify-content: space-around;
-  align-items: flex-end;
 }
 
-.chart-layout-item {
+.chart-layout__item {
+  align-self: flex-end;
   width: 60px;
-  background: #ef5122;
   color: #fff;
   text-align: center;
   height: var(--percent);
+  background-color: #EF5122;
   animation: growth ease-in 0.5s;
 }
 
-/* đătk têm animations */
 @keyframes growth {
-  form {
+  from {
     opacity: 0;
-    height: calc(var(--percent) - var(--percent));
+    height: 0%;
   }
 
   to {
     opacity: 1;
-    height: calc(var(--percent) - 0%);
+    height: var(--percent);
   }
+}
+
+.the-end {
+  margin: 12px auto 48px auto;
+  padding: 32px 0;
+  max-width: 740px;
+  min-height: 360px;
+  display: flex;
+}
+
+.the-end__first {
+  background: #fff;
+  flex: 1;
+  padding: 10px;
+}
+
+.the-end__second {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.the-end__second-one {
+  background: #579189;
+  color: #fff;
+  flex: 1;
+  padding: 10px;
+}
+
+.the-end__second-two {
+  background: #6a9b4e;
+  color: #fff;
+  flex: 1;
+  padding: 10px;
 }
