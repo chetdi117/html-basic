@@ -91,3 +91,72 @@ body {
 .feature-item:nth-child(3) {
   background-color: rgb(160, 138, 240);
 }
+
+.wrap-layout {
+  width: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  height: 120px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.wrap-layout-item {
+  width: 190px;
+  height: 90px;
+  color: #fff;
+  text-align: center;
+  line-height: 90px;
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 10px;
+  background: #ef5122;
+}
+
+.center-layout {
+  width: 640px;
+  height: 360px;
+  margin: 36px auto 0 auto;
+  padding: 32px 0;
+  background: #22efd4;
+  display: flex;
+}
+
+.center-layout-item {
+  font-size: 42px;
+  font-weight: 700;
+  margin: auto;
+}
+
+.chart-layout {
+  background: #fff;
+  margin: 36px auto 0 auto;
+  padding: 32px 0;
+  height: 360px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.chart-layout-item {
+  width: 60px;
+  background: #ef5122;
+  color: #fff;
+  text-align: center;
+  height: var(--percent);
+  animation: growth ease-in 0.5s;
+}
+
+/* đătk têm animations */
+@keyframes growth {
+  form {
+    opacity: 0;
+    height: calc(var(--percent) - var(--percent));
+  }
+
+  to {
+    opacity: 1;
+    height: calc(var(--percent) - 0%);
+  }
+}
