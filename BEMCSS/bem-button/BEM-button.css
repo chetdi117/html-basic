@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Helvetica Neue";
+  background-color: #f4f4f5;
+}
+
+body>div {
+  margin: auto;
+}
+
+/* ======= Buttons ======== */
+/* block */
+.btn {
+  display: inline-block;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  padding: 12px 48px;
+  border-radius: 50px;
+  cursor: pointer;
+  min-width: 120px;
+  transition: opacity 0.2s ease;
+  /*transition Tạo ra keyfarm cho sự thay đổi thường các hiệu ứng hover chỉ có 0.2s ease và linear ko có sự khác biệt*/
+}
+
+.btn:hover {
+  opacity: 0.8;
+  /*opacity độ đục cảu back group*/
+}
+
+/* trick bất select thang class có là .btn kế bên thì chỉ cần dấu + */
+/* .btn+.btn đây là bất cứ class .btn kế bên thì mặt đinh tự cách ra */
+.btn+.btn {
+  margin-left: 16px;
+  /**/
+}
+
+.btn--success {
+  background-color: #71be34;
+}
+
+.btn--danger {
+  background-color: #ff623d;
+}
+
+.btn--warn {
+  background-color: #ffb702;
+}
+
+.btn-disabled {
+  opacity: 0.5 !important;
+  cursor: default;
+}
+
+.btn--infor {
+  background-color: #2f86eb;
+}
+
+.btn--size-l {
+  padding: 16px 56px;
+}
+
+.btn--size-s {
+  padding: 14px 32px;
+}

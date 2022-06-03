@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM Toast Message UI</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="BEM-toast-message.css" />
+    <link rel="stylesheet" href="../bem-button/BEM-button.css" />
+  </head>
+  <body>
+    <div id="toast"></div>
+    <div>
+      <div onclick="btnsuccess()" class="btn btn--success">
+        Show Success toast
+      </div>
+      <div onclick="btnerror()" class="btn btn--danger">Show Error toast</div>
+      <div onclick="btnwarning()" class="btn btn--warn">Show warning toast</div>
+      <div onclick="btninfor()" class="btn btn--infor">Show infor toast</div>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js"
+      integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      function Toast({ title = "", message = "", type = "", duration = 0 }) {
+        const main = document.getElementById("toast");
+        if (main) {
+          const toast = document.createElement("div");
+          const delay = (duration / 1000).toFixed(2);
+          toast.classList.add("toast", `toast--${type}`);
+          toast.style.anonymous = ` animation: slidetoastInleft ease 0.5s,
+          fadeoutToast linear 1s ${delay}s forwards;`;
+          //auto remove toast
+          const autoRemoveTimeoutId = setTimeout(() => {
+            main.removeChild(toast);
+          }, duration + 1000);
+          //remove toast
+          toast.onclick = function (e) {
+            if (e.target.closest(".toast__close")) {
+              main.removeChild(toast);
+              clearTimeout(autoRemoveTimeoutId);
+            }
+          };
+          const icons = {
+            success: "fa-solid fa-circle-check",
+            infor: "fa-solid fa-circle-info",
+            warning: "fa-solid fa-triangle-exclamation",
+            error: "fa-solid fa-circle-exclamation",
+          };
+          const icon = icons[type];
+          toast.innerHTML = `
+            <div class="toast__icon"><i class="${icon}"></i></div>
+              <div class="toast__body">
+                <h3 class="toast__title">${title}</h3>
+                <div class="toast__msg">
+                 ${message}
+                </div>
+              </div>
+            <div class="toast__close"><i class="fa-solid fa-xmark"></i></div>
+            `;
+          main.append(toast);
+        }
+      }
+      // Toast({
+      //   title: "Success",
+      //   message: "Bạn đả đăng ký thành công",
+      //   type: "success",
+      //   duration: 3000,
+      // });
+      function btnsuccess() {
+        var toast = {
+          title: "Success",
+          message: "Bạn đả đăng ký thành công",
+          type: "success",
+          duration: 3000,
+        };
+        Toast(toast);
+      }
+      function btnerror() {
+        var toast = {
+          title: "Error",
+          message: "Có lỗi xảy ra khi đăng nhập!!!",
+          type: "error",
+          duration: 3000,
+        };
+        Toast(toast);
+      }
+      function btnwarning() {
+        var toast = {
+          title: "Warning",
+          message: "Cảnh báo có gì đó không đúng !!!",
+          type: "warning",
+          duration: 3000,
+        };
+        Toast(toast);
+      }
+      function btninfor() {
+        var toast = {
+          title: "Infor",
+          message: "Thông tin chi tiết hảy vo trang chủ",
+          type: "infor",
+          duration: 3000,
+        };
+        Toast(toast);
+      }
+    </script>
+  </body>
+</html>
