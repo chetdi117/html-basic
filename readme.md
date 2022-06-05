@@ -129,3 +129,6 @@
 -làm button
 -làm message
 -Làm 1 thành phần trên website.
+
+# base-site
+Là phân thực hành một site thực tế
