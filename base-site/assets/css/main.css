@@ -17,6 +17,7 @@
 .header__navbar-item {
   margin: 0 8px;
   position: relative;
+  min-width: 26px;
 }
 
 .header__navbar-item--separate::after {
@@ -39,6 +40,13 @@
   font-weight: 300;
 }
 
+.header__navbar-item,
+.header_navbar-item-link,
+.header__navbar-icon-link {
+  display: inline-block;
+  align-items: center;
+}
+
 .header__navbar-item:hover,
 .header_navbar-item-link:hover {
   cursor: pointer;
@@ -52,4 +60,19 @@
 .header__navbar-icon-link {
   color: #fff;
   text-decoration: none;
+}
+
+.header__navbar-icon-link:hover {
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.header___navbar-icon {
+  font-size: 1.8rem;
+  margin: 0 8px;
+}
+
+.header__navbar-item--no-pointer {
+  cursor: text;
+  color: var(--white-color);
 }
