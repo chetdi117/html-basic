@@ -15,13 +15,12 @@ html {
   /* cách sử dụng này là hack */
   font-size: 62.5%;
   line-height: 1.6rem;
-  font-family: 'Roboto',
-    sans-serif;
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
 
 .grid {
-  width: 1200px;
+  width: 1280px;
   max-width: 100%;
   margin: 0 auto;
 }
