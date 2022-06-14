@@ -137,7 +137,12 @@
   cursor: default;
   transform-origin: calc(100% - 20px) top; /*định tâm scale vd o giua ben trai ben phai...*/
   animation: headerNotifyGrowth ease-in 0.2s;
+  -webkit-animation: headerNotifyGrowth ease-in 0.2s;
+  -ms-animation: headerNotifyGrowth ease-in 0.2s;
+  -moz-animation: headerNotifyGrowth ease-in 0.2s;
+  -o-animation: headerNotifyGrowth ease-in 0.2s;
   display: none;
+  will-change: opacity, transition; /*thuộc tính này giúp noi cho trình duyệt cái thuông tinh animation thay đổi*/
 }
 .header__notify::before {
   content: "";
@@ -180,7 +185,9 @@
   line-height: 40px;
   margin-left: 12px;
   user-select: none;
-  /* thuộc tính prefix */
+  /* thuộc tính prefix trong thực tế có thể bạn gập trường hợp đạc thù các thị trường khó tinh như nhật mũ đồi hỏi sự tỷ mỷ.
+    thuộc tính này giúp cho một số trình duyệt có thẻ hiểu được thuộc tính mình muốn ghi
+  */
   -webkit-user-select: none; /*webkit la cho nhan chrome*/
 }
 
