@@ -209,7 +209,8 @@
   list-style-type: none;
 }
 
-.header__notify-item {}
+.header__notify-item {
+}
 
 .header__notify-item:hover {
   background: #f7f7f7;
@@ -285,6 +286,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 0 12px;
+  margin-top: 10px;
 }
 
 .auth-form__heading {
@@ -300,7 +303,8 @@
   cursor: pointer;
 }
 
-.auth-form__form {}
+.auth-form__form {
+}
 
 .auth-form__input {
   width: 100%;
@@ -316,10 +320,32 @@
 .auth-form__input:focus {
   border-color: #888;
 }
-
+/* auth-form__aside */
 .auth-form__aside {
   margin-top: 18px;
 }
+/* auth-form__aside login auth-form__help*/
+
+.auth-form__help {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.auth-form__help-link {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #939393;
+}
+.auth-form__help-separate {
+  display: block;
+  height: 22px;
+  margin: 0px 16px;
+  border-left: 1px solid #eaeaea;
+}
+.auth-form__help-forgot {
+  color: var(--primary-color);
+}
+/* end  auth-form__aside login auth-form__help */
 
 .auth-form__policy-text {
   font-size: 1.2rem;
@@ -357,7 +383,6 @@
 
 .auth-form__socials-icon {
   font-size: 1.8rem;
-
 }
 
 .auth-form__socials--facebook {
@@ -369,7 +394,8 @@
   color: var(--white-color);
 }
 
-.auth-form__socials--google .auth-form__socials-icon {}
+.auth-form__socials--google .auth-form__socials-icon {
+}
 
 .auth-form__socials--google {
   color: #666;
