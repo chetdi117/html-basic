@@ -5,6 +5,12 @@
   --text-color: #333;
   --primary-color: #ee4b2b;
   --border-color: #dbdbdb;
+
+  --navbar-height: 24px;
+  --header-height: 120px;
+  --header-with-search-height: calc(
+    var(--header-height) - var(--navbar-height)
+  );
 }
 
 * {
