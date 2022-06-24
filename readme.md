@@ -26,12 +26,12 @@ mục đích đặt biến là khi sử dụng nhiều nơi chỉ cần sử 1 c
       -vh(viewport height): thằng này phụ thược vào chiều dài của kích thước của trình duyệt
       -vmin
       -vmax
-    ## 3.box-sizing: chiều ngàng của đối tượng = kích thuoc của border + kích thuocs pading+  kích thước content
+    3.box-sizing: chiều ngàng của đối tượng = kích thuoc của border + kích thuocs pading+  kích thước content
       thuộc tính:
         -content-box: đây là thuộc tính mặt đinh của box-sizing là ko set thuộc tính box-sizing trở kích thuoc chưa set box-sizing
         -border-box: đây là thuộc tính kích hoạt box-sizing
         -unset: là hủy thuộc tính, trong thức tế khi muốn hủy box-sizing thì gọi là hàm này để unset để hủy thuộc tính trước đó của class hoạc id của đó
-    ## 4.background-clip: là nó quyết định backgroup được độ ranh giới nào
+    4.background-clip: là nó quyết định backgroup được độ ranh giới nào
       thuộc tính:
         -border-box: Thuộc tính là trạng thái mặt đinh của backbgroup clip
         -padding-box: Thuộc tính là trạng thái đổ backgroup từ padding vào
