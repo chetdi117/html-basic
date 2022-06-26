@@ -8,9 +8,7 @@
 
   --navbar-height: 24px;
   --header-height: 120px;
-  --header-with-search-height: calc(
-    var(--header-height) - var(--navbar-height)
-  );
+  --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
 }
 
 * {
@@ -97,7 +95,7 @@ html {
 
 /* btn style */
 .btn {
-  min-width: 142px;
+  min-width: 124px;
   height: 34px;
   text-decoration: none;
   border: none;
