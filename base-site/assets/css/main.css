@@ -8,12 +8,16 @@
   display: flex;
   justify-content: space-between;
   padding-left: 0px;
-  /* height: var(--navbar-height); */
+  /* height: 34px; */
+  height: var(--navbar-height);
+  align-items: center;
 }
 
 .header__navbar-list {
   list-style: none;
   margin: 4px 0 0 0;
+  display: flex;
+  align-items:center;
 }
 
 .header__navbar-list:first-child {
@@ -26,6 +30,80 @@
   min-width: 26px;
 }
 
+/* header navbar user */
+.header__navbar-user{
+    display: flex;
+    justify-items: center;
+    position: relative;
+}
+.header__navbar-user:hover .header__navbar-user-menu{
+  display:block;
+}
+.header__navbar-user-img{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header__navbar-user-name{
+  margin-left: 8px;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+/* header navabar user - user menu */
+.header__navbar-user-menu{
+  position:absolute;
+  top:calc(100% + 6px);
+  right:0;
+  width: 160px;
+  padding-left:0px;
+  list-style: none;
+  border-radius: 2px;
+  background-color: var(--white-color);
+  z-index: 1;
+  box-shadow: 0px 1px 2px #e0e0e0;
+  display: none;
+}
+
+.header__navbar-user-menu::before {
+  content: "";
+  border-style: solid;
+  border-color: transparent transparent var(--white-color) transparent;
+  border-width: 19px 25px;
+  position: absolute;
+  right: 4px;
+  top: -29px;
+}
+.header__navbar-user-menu::after{
+  content: "";
+  display:block;
+  position: absolute;
+  top:-8px;
+  right: 0;
+  width:56%;
+  height:8px;
+  /* background: red; */
+}
+
+.header__navbar-user-item a{
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.4rem;
+  padding: 4px 16px;
+  display: block;
+}
+.header__navbar-user-item a:first-child {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+.header__navbar-user-item a:last-child {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.header__navbar-user-item a:hover{
+  background: #fafafa;
+}
 .header__navbar-item--has-qr:hover .header__qr {
   display: block;
 }
@@ -47,7 +125,7 @@
 
 .header__navbar-item,
 .header_navbar-item-link {
-  display: inline-block;
+  display: flex;
   font-size: 1.4rem;
   color: var(--white-color);
   text-decoration: none;
@@ -57,7 +135,7 @@
 .header__navbar-item,
 .header_navbar-item-link,
 .header__navbar-icon-link {
-  display: inline-block;
+  display: flex;
   align-items: center;
 }
 
