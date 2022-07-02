@@ -133,12 +133,16 @@ html {
   line-height: 1.6rem;
 }
 
+.btn.btn--normal {
+  background: var(--white-color);
+}
+
 .btn.btn-normal:hover {
   background: rgb(157 151 151 / 24%);
 }
 
 .btn.btn--primary {
-  background-color: var(--primary-color);
+  background: var(--primary-color);
   color: var(--white-color);
 }
 
@@ -152,4 +156,67 @@ html {
   height: 30px;
   font-size: 12px;
   padding: 0 8px;
+}
+
+/* selection */
+.select-input {
+  height: 34px;
+  padding: 0 12px;
+  background: var(--white-color);
+  border-radius: 2px;
+  min-width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.select-input__label {
+  font-size: 1.4rem;
+}
+
+.select-input__icon {
+  font-size: 1.4em;
+  color: rgb(131, 131, 131);
+  position: relative;
+  top: 1px;
+}
+
+/* list option */
+.select-input:hover .select-input__list {
+  display: block;
+}
+
+.select-input__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25px;
+  border-radius: 2px;
+  background: var(--white-color);
+  padding: 8px 16px;
+  list-style: none;
+  display: none;
+}
+
+.select-input__list::before {
+  content: "";
+  position: absolute;
+  top: -26px;
+  left: 0;
+  /* background-color: red; */
+  width: 100%;
+  height: 32px;
+}
+
+.select-input__link {
+  display: block;
+  padding: 4px 0;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1.4rem;
+}
+
+.select-input__link:hover {
+  color: var(--primary-color);
 }
