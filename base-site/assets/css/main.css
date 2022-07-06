@@ -1048,3 +1048,45 @@
 .home-filter__page-btn--disabled .home-filter__page-icon {
   color: #ccc;
 }
+
+/*1product item list */
+.home-product-item{
+  margin-top: 10px;
+  background-color: var(--white-color);
+}
+
+.home-product-item__img{
+  padding-top: 100%; /*là chiều ngan của thẻ chứa nó*/
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.home-product-item__name{
+  font-size:1.4rem;
+  font-weight: 400;
+  color: var(--text-color);
+  line-height: 1.8rem;
+  height:3.6rem;/*muôn hiển 2 dong thì line-height * 2 set height*/
+  /* padding:0 10px; */
+  margin:10px;
+  overflow: hidden;
+  display:block;
+  display: -webkit-box;/*Thuộc tính này chỉ sử dụng được các trình duyệt có sử dụng -webkit*/
+  -webkit-box-orient: vertical;/*Thuộc tinh này khi dung display -webkit-box thuôc tính này xác định hướng của dòng chử*/
+  -webkit-line-clamp:2 ;/*Thuộc tính này giúp khi đên 2 dong hiện thị dấu ...*/
+}
+.home-product-item__price{}
+.home-product-item__price-old{}
+.home-product-item__price-current{}
+.home-product-item__action{}
+.home-product-item__like{}
+.home-product-item__rating{}
+
+.home-product-item__origin{}
+.home-product-item__brand{}
+.home-product-item__origin-name{}
+.home-product-item__favourite{}
+.home-product-item__sale-off{}
+.home-product-item__percent{}
+.home-product-item__sale-off-label{}
