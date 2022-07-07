@@ -1069,21 +1069,78 @@
   line-height: 1.8rem;
   height:3.6rem;/*muôn hiển 2 dong thì line-height * 2 set height*/
   /* padding:0 10px; */
-  margin:10px;
+  margin:10px 10px 6px;
   overflow: hidden;
   display:block;
   display: -webkit-box;/*Thuộc tính này chỉ sử dụng được các trình duyệt có sử dụng -webkit*/
   -webkit-box-orient: vertical;/*Thuộc tinh này khi dung display -webkit-box thuôc tính này xác định hướng của dòng chử*/
   -webkit-line-clamp:2 ;/*Thuộc tính này giúp khi đên 2 dong hiện thị dấu ...*/
 }
-.home-product-item__price{}
-.home-product-item__price-old{}
-.home-product-item__price-current{}
-.home-product-item__action{}
-.home-product-item__like{}
-.home-product-item__rating{}
 
-.home-product-item__origin{}
+.home-product-item__price{
+  display: flex;
+  /* margin-left: 10px; */
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+
+.home-product-item__price-old{
+  margin-left: 10px;
+  font-size: 1.4rem;
+  color:#666;
+  text-decoration: line-through;
+}
+
+.home-product-item__price-current{
+  font-size: 1.6rem;
+  margin-left: 10px;
+  color:var(--primary-color);
+}
+.home-product-item__action{
+  display: flex;
+  justify-content: space-between;
+  margin: 6px 10px 0;
+}
+.home-product-item__like{
+  font-size: 1.3rem;
+}
+
+.home-product-item__like .home-product-item__like-icon-fill{
+  display:none;
+  color:#f63d30;
+}
+
+.home-product-item__like--liked .home-product-item__like-icon-fill{
+  display:inline-block;
+}
+
+.home-product-item__like--liked .home-product-item__like-icon-empty{
+  display: none;
+}
+
+.home-product-item__rating{
+  font-size: 1rem;
+  transform: scale(0.8);/*scale là thu nhỏ*/
+  /*transform origin giúp xác định vị trị của tranfafrom niếu ko để thuộc tính này thì nó auto đẻ center*/
+  transform-origin:right;/*thuộc tính này giúp thu nhỉ lại năm ở vị trí nào trong trường hợp khi tranform scale thu nhỏ lại thì nhó vẩ giữ ở vị tri right*/
+  color: #d5d5d5;
+  margin:-1px 0 0 auto;/*tự động canh bên trái cho đến khi đụng item tiếp theo cái này chỉ áp dụng với display flex*/
+}
+.home-product-item__star--gold{
+  color:var(--star-gold-color);
+}
+.home-product-item__sold{
+  font-size: 1.2rem;
+  color: var(--text-color);
+  margin-left: 6px;
+}
+.home-product-item__origin{
+  display: flex;
+  justify-content:space-between;
+  margin: 3px 10px 0;
+  color:#595959;/*thẻ span tu động ko an các thẻ css chỉ ăn css khi set trực tiếp vào nó*/
+  font-weight: 300;
+}
 .home-product-item__brand{}
 .home-product-item__origin-name{}
 .home-product-item__favourite{}
