@@ -1148,10 +1148,11 @@
 .home-product-item__origin-name{}
 .home-product-item__favourite{
   position: absolute;
-  top:10px;
+  top:5px;
   left:-4px;
   color:var(--primary-color);
   background: currentColor;/*current color là keyword của css nó ăn theo màu của đối tượng*/
+  filter: opacity(85%);
   font-size: 1.2rem;
   font-weight: 500;
   line-height:1.6rem;
