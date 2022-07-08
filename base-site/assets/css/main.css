@@ -1053,6 +1053,7 @@
 
 /*1product item list */
 .home-product-item{
+  position: relative;
   margin-top: 10px;
   background-color: var(--white-color);
 }
@@ -1145,7 +1146,35 @@
 }
 .home-product-item__brand{}
 .home-product-item__origin-name{}
-.home-product-item__favourite{}
+.home-product-item__favourite{
+  position: absolute;
+  top:10px;
+  left:-4px;
+  color:var(--primary-color);
+  background: currentColor;/*current color là keyword của css nó ăn theo màu của đối tượng*/
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height:1.6rem;
+  padding-right: 4px;
+  border-radius: 0 3px 3px 0;
+}
+.home-product-item__favourite span{
+  color:var(--white-color);
+}
+.home-product-item__favourite svg{
+  font-size:0.9rem;
+  margin:0 2px 0 4px;
+  color:var(--white-color);
+}
+.home-product-item__favourite::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom:-3px;
+  border-top:solid 3px currentColor;
+  border-left: solid 3px transparent;/*trong trường hợp nó sẻ an the màu của thằng cha nó*/
+  filter: brightness(40%);/*filter lầ thuộc tính của css, brighness là chỉnh độ sáng của màu*/
+}
 .home-product-item__sale-off{}
 .home-product-item__percent{}
 .home-product-item__sale-off-label{}
