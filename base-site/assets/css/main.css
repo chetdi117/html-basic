@@ -1051,136 +1051,176 @@
   color: #ccc;
 }
 
-/*1product item list */
-.home-product-item{
+/*product item list */
+.home-product {
+  margin-bottom: 10px;
+}
+
+.home-product-item {
   position: relative;
   margin-top: 10px;
   background-color: var(--white-color);
+  border-radius: 0 0 2px 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  /*là thuộc tính khai báo khi có chuyển động tạo animation cái gì*/
+  transition: transform ease-in 0.1s;
+  will-change: transform;
+  display: block;
+  text-decoration: none;
 }
 
-.home-product-item__img{
-  padding-top: 100%; /*là chiều ngan của thẻ chứa nó*/
+.home-product-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+.home-product-item__img {
+  padding-top: 100%;
+  /*là chiều ngan của thẻ chứa nó*/
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
 
-.home-product-item__name{
-  font-size:1.4rem;
+.home-product-item__name {
+  font-size: 1.4rem;
   font-weight: 400;
   color: var(--text-color);
   line-height: 1.8rem;
-  height:3.6rem;/*muôn hiển 2 dong thì line-height * 2 set height*/
+  height: 3.6rem;
+  /*muôn hiển 2 dong thì line-height * 2 set height*/
   /* padding:0 10px; */
-  margin:10px 10px 6px;
+  margin: 10px 10px 6px;
   overflow: hidden;
-  display:block;
-  display: -webkit-box;/*Thuộc tính này chỉ sử dụng được các trình duyệt có sử dụng -webkit*/
-  -webkit-box-orient: vertical;/*Thuộc tinh này khi dung display -webkit-box thuôc tính này xác định hướng của dòng chử*/
-  -webkit-line-clamp:2 ;/*Thuộc tính này giúp khi đên 2 dong hiện thị dấu ...*/
+  display: block;
+  display: -webkit-box;
+  /*Thuộc tính này chỉ sử dụng được các trình duyệt có sử dụng -webkit*/
+  -webkit-box-orient: vertical;
+  /*Thuộc tinh này khi dung display -webkit-box thuôc tính này xác định hướng của dòng chử*/
+  -webkit-line-clamp: 2;
+  /*Thuộc tính này giúp khi đên 2 dong hiện thị dấu ...*/
 }
 
-.home-product-item__price{
+.home-product-item__price {
   display: flex;
   /* margin-left: 10px; */
   align-items: baseline;
   flex-wrap: wrap;
 }
 
-.home-product-item__price-old{
+.home-product-item__price-old {
   margin-left: 10px;
   font-size: 1.4rem;
-  color:#666;
+  color: #666;
   text-decoration: line-through;
 }
 
-.home-product-item__price-current{
+.home-product-item__price-current {
   font-size: 1.6rem;
   margin-left: 10px;
-  color:var(--primary-color);
+  color: var(--primary-color);
 }
-.home-product-item__action{
+
+.home-product-item__action {
   display: flex;
   justify-content: space-between;
   margin: 6px 10px 0;
 }
-.home-product-item__like{
+
+.home-product-item__like {
   font-size: 1.3rem;
+  color: var(--text-color);
 }
 
-.home-product-item__like .home-product-item__like-icon-fill{
-  display:none;
-  color:#f63d30;
+.home-product-item__like--liked .home-product-item__like-icon-fill {
+  display: none;
+  color: #f63d30;
 }
 
-.home-product-item__like--liked .home-product-item__like-icon-fill{
-  display:inline-block;
+.home-product-item__like--liked .home-product-item__like-icon-fill {
+  display: inline-block;
 }
 
-.home-product-item__like--liked .home-product-item__like-icon-empty{
+.home-product-item__like--liked .home-product-item__like-icon-empty {
   display: none;
 }
 
-.home-product-item__rating{
+.home-product-item__rating {
   font-size: 1rem;
-  transform: scale(0.8);/*scale là thu nhỏ*/
+  transform: scale(0.8);
+  /*scale là thu nhỏ*/
   /*transform origin giúp xác định vị trị của tranfafrom niếu ko để thuộc tính này thì nó auto đẻ center*/
-  transform-origin:right;/*thuộc tính này giúp thu nhỉ lại năm ở vị trí nào trong trường hợp khi tranform scale thu nhỏ lại thì nhó vẩ giữ ở vị tri right*/
+  transform-origin: right;
+  /*thuộc tính này giúp thu nhỉ lại năm ở vị trí nào trong trường hợp khi tranform scale thu nhỏ lại thì nhó vẩ giữ ở vị tri right*/
   color: #d5d5d5;
-  margin:-1px 0 0 auto;/*tự động canh bên trái cho đến khi đụng item tiếp theo cái này chỉ áp dụng với display flex*/
+  margin: -1px 0 0 auto;
+  /*tự động canh bên trái cho đến khi đụng item tiếp theo cái này chỉ áp dụng với display flex*/
 }
-.home-product-item__star--gold{
-  color:var(--star-gold-color);
+
+.home-product-item__star--gold {
+  color: var(--star-gold-color);
 }
-.home-product-item__sold{
+
+.home-product-item__sold {
   font-size: 1.2rem;
   color: var(--text-color);
   margin-left: 6px;
 }
-.home-product-item__origin{
+
+.home-product-item__origin {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   margin: 3px 10px 0;
-  color:#595959;/*thẻ span tu động ko an các thẻ css chỉ ăn css khi set trực tiếp vào nó*/
+  color: #595959;
+  /*thẻ span tu động ko an các thẻ css chỉ ăn css khi set trực tiếp vào nó*/
   font-weight: 300;
 }
-.home-product-item__brand{}
-.home-product-item__origin-name{}
-.home-product-item__favourite{
+
+.home-product-item__brand {}
+
+.home-product-item__origin-name {}
+
+.home-product-item__favourite {
   position: absolute;
-  top:5px;
-  left:-4px;
-  color:var(--primary-color);
-  background: currentColor;/*current color là keyword của css nó ăn theo màu của đối tượng*/
+  top: 5px;
+  left: -4px;
+  color: var(--primary-color);
+  background: currentColor;
+  /*current color là keyword của css nó ăn theo màu của đối tượng*/
   filter: opacity(85%);
   font-size: 1.2rem;
   font-weight: 500;
-  line-height:1.6rem;
+  line-height: 1.6rem;
   padding-right: 4px;
   border-radius: 0 3px 3px 0;
 }
-.home-product-item__favourite span{
-  color:var(--white-color);
+
+.home-product-item__favourite span {
+  color: var(--white-color);
 }
-.home-product-item__favourite svg{
-  font-size:0.9rem;
-  margin:0 2px 0 4px;
-  color:var(--white-color);
+
+.home-product-item__favourite svg {
+  font-size: 0.9rem;
+  margin: 0 2px 0 4px;
+  color: var(--white-color);
 }
-.home-product-item__favourite::after{
+
+.home-product-item__favourite::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom:-3px;
-  border-top:solid 3px currentColor;
-  border-left: solid 3px transparent;/*trong trường hợp nó sẻ an the màu của thằng cha nó*/
-  filter: brightness(40%);/*filter lầ thuộc tính của css, brighness là chỉnh độ sáng của màu*/
+  bottom: -3px;
+  border-top: solid 3px currentColor;
+  border-left: solid 3px transparent;
+  /*trong trường hợp nó sẻ an the màu của thằng cha nó*/
+  filter: brightness(40%);
+  /*filter lầ thuộc tính của css, brighness là chỉnh độ sáng của màu*/
 }
 
-.home-product-item__sale-off{
+.home-product-item__sale-off {
   position: absolute;
   right: 0;
-  top:0;
+  top: 0;
   width: 40px;
   height: 36px;
   background: var(--sale-off-background-color);
@@ -1189,26 +1229,26 @@
   flex-direction: column;
 }
 
-.home-product-item__sale-off::after{
-  content:"";
+.home-product-item__sale-off::after {
+  content: "";
   position: absolute;
   left: 0;
   bottom: -4px;
   border-width: 0 20px 4px;
   border-style: solid;
-  border-color: transparent  var(--sale-off-background-color) transparent  var(--sale-off-background-color);
+  border-color: transparent var(--sale-off-background-color) transparent var(--sale-off-background-color);
 }
 
-.home-product-item__percent{
-  color:#ee4d2d;
+.home-product-item__percent {
+  color: #ee4d2d;
   font-weight: 600;
   font-size: 1.3rem;
   line-height: 1.3rem;
   padding: 3px 0 4px 0;
 }
 
-.home-product-item__sale-off-label{
-  color:var(--white-color);
+.home-product-item__sale-off-label {
+  color: var(--white-color);
   font-size: 1.3rem;
   line-height: 1.3rem;
   font-weight: 600;
