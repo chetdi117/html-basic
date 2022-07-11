@@ -1168,14 +1168,13 @@
   font-size: 1.3rem;
   color: var(--text-color);
 }
-
-.home-product-item__like--liked .home-product-item__like-icon-fill {
-  display: none;
-  color: #f63d30;
+.home-product-item__like .home-product-item__like-icon-fill{
+  display:none;
 }
 
 .home-product-item__like--liked .home-product-item__like-icon-fill {
   display: inline-block;
+  color: #f63d30;
 }
 
 .home-product-item__like--liked .home-product-item__like-icon-empty {
