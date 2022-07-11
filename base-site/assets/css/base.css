@@ -4,6 +4,7 @@
   --black-color: #000;
   --text-color: #333;
   --primary-color: #ee4b2b;
+  --primary-color-hover:#ed5c3f;
   --border-color: #dbdbdb;
   --star-gold-color:#ffce3e;
   --sale-off-background-color:rgba(255, 216, 64, 0.94);
@@ -226,3 +227,35 @@ html {
 .select-input__link:hover {
   color: var(--primary-color);
 }
+
+/* pagination */
+.pagination{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+.pagination-item{
+  margin: 0 12px;
+}
+.pagination-item--active .pagination-item__link{
+  background: var(--primary-color);
+  color: var(--white-color);
+}
+.pagination-item--active .pagination-item__link:hover{
+  background:var(--primary-color-hover);
+}
+.pagination-item__link{
+  --height:30px;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #939393;
+  min-width: 40px;
+  height:var(--height);
+  display: block;
+  text-align: center;
+  line-height: var(--height);
+  border-radius: 2px;
+}
+.pagination-item__icon{}
